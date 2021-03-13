@@ -62,5 +62,16 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".postcssrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z618-dev/house.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z618-dev/house/issues"
+  },
+  "homepage": "https://github.com/z618-dev/house#readme"
 }

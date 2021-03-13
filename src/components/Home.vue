@@ -8,17 +8,19 @@
         <div class="layui-logo">{{ $t("lang.logo") }}</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-          <li class="layui-nav-item"><a href="">控制台</a></li>
-          <li class="layui-nav-item"><a href="">商品管理</a></li>
-          <li class="layui-nav-item"><a href="">用户</a></li>
-          <li class="layui-nav-item">
+          <li class="layui-nav-item"><a href="">{{ $t("lang.house") }}</a></li>
+          <li class="layui-nav-item"><a href="">我的日常工作</a></li>
+          <li class="layui-nav-item"><a href="">消息中心</a></li>
+          <li class="layui-nav-item"><a href="">客源管理</a></li>
+          <li class="layui-nav-item"><a href="">任务管理</a></li>
+          <!-- <li class="layui-nav-item">
             <a href="javascript:;">其它系统</a>
             <dl class="layui-nav-child">
               <dd><a href="">邮件管理</a></dd>
               <dd><a href="">消息管理</a></dd>
               <dd><a href="">授权管理</a></dd>
             </dl>
-          </li>
+          </li> -->
         </ul>
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
@@ -31,7 +33,7 @@
               <dd><a href="">安全设置</a></dd>
             </dl>
           </li>
-          <li class="layui-nav-item" @click="changeLaguages()">切换语言</li>
+          <li class="layui-nav-item c-change" @click="changeLaguages()">切换语言</li>
         </ul>
       </div>
 
@@ -77,7 +79,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Home",
   data() {
     return {
       lang: "zh",
@@ -105,3 +107,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.c-change{
+  cursor: pointer;
+}
+</style>
