@@ -8,7 +8,6 @@
         <div class="layui-logo">{{ $t("lang.logo") }}</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-<<<<<<< HEAD:src/components/Home.vue
           <li class="layui-nav-item"><a href="">{{ $t("lang.house") }}</a></li>
           <li class="layui-nav-item"><a href="">我的日常工作</a></li>
           <li class="layui-nav-item"><a href="">消息中心</a></li>
@@ -16,24 +15,12 @@
           <li class="layui-nav-item"><a href="">任务管理</a></li>
           <!-- <li class="layui-nav-item">
             <a href="javascript:;">其它系统</a>
-=======
-          <li class="layui-nav-item"><a href="">房源管理</a></li>
-          <li class="layui-nav-item">
-            <a href="javascript:;">我的日常工作</a>
->>>>>>> 7efeaa788d472ae0bb8996c69a3c1a8caa95c098:src/components/HelloWorld.vue
             <dl class="layui-nav-child">
               <dd><a href="">跟进报告</a></dd>
               <dd><a href="">咨询</a></dd>
               <dd><a href="">预约</a></dd>
             </dl>
-<<<<<<< HEAD:src/components/Home.vue
           </li> -->
-=======
-          </li>
-          <li class="layui-nav-item"><a href="">消息中心</a></li>
-          <li class="layui-nav-item"><a href="">客源管理</a></li>
-          <li class="layui-nav-item"><a href="">任务管理</a></li>
->>>>>>> 7efeaa788d472ae0bb8996c69a3c1a8caa95c098:src/components/HelloWorld.vue
         </ul>
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
@@ -46,12 +33,8 @@
               <dd><a href="">安全设置</a></dd>
             </dl>
           </li>
-<<<<<<< HEAD:src/components/Home.vue
           <li class="layui-nav-item c-change" @click="changeLaguages()">切换语言</li>
-=======
-          <li class="layui-nav-item" @click="changeLaguages()"><span class="langug">切换语言</span></li>
->>>>>>> 7efeaa788d472ae0bb8996c69a3c1a8caa95c098:src/components/HelloWorld.vue
-        </ul>
+      </ul>
       </div>
 
       <div class="layui-side layui-bg-black">
@@ -119,15 +102,9 @@ export default {
   },
 };
 </script>
-<<<<<<< HEAD:src/components/Home.vue
 
 <style>
 .c-change{
   cursor: pointer;
-=======
-<style scoped>
-.langug{
-  color: rgba(255,255,255,.7);
->>>>>>> 7efeaa788d472ae0bb8996c69a3c1a8caa95c098:src/components/HelloWorld.vue
 }
 </style>
