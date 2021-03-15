@@ -9,10 +9,10 @@
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
           <li class="layui-nav-item"><a href="">{{ $t("lang.house") }}</a></li>
-          <li class="layui-nav-item"><a href="">我的日常工作</a></li>
-          <li class="layui-nav-item"><a href="">消息中心</a></li>
-          <li class="layui-nav-item"><a href="">客源管理</a></li>
-          <li class="layui-nav-item"><a href="">任务管理</a></li>
+          <li class="layui-nav-item"><a href="">{{ $t("lang.work") }}</a></li>
+          <li class="layui-nav-item"><a href="">{{ $t("lang.information") }}</a></li>
+          <li class="layui-nav-item"><a href="">{{ $t("lang.customer") }}</a></li>
+          <li class="layui-nav-item"><a href="">{{ $t("lang.task") }}</a></li>
           <!-- <li class="layui-nav-item">
             <a href="javascript:;">其它系统</a>
             <dl class="layui-nav-child">
