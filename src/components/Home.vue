@@ -78,9 +78,29 @@
           </div>
 
         </div>
+        <!-- <el-row>
+        <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+          <el-card :body-style="{ padding: '0px' }">
+            <img src="../assets/image/1.jpg" class="image">
+            <div style="padding: 14px;">
+              <span>好吃的汉堡</span>
+              <div class="bottom clearfix">
+                <time class="time">{{ currentDate }}</time>
+                <el-button type="text" class="button">操作按钮</el-button>
+              </div>
+            </div>
+          </el-card>
+        </el-col>
+      </el-row> -->
       </div>
 
-      <div class="layui-footer">© layui.com - 底部固定区域</div>
+      <div class="layui-footer">
+        <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="1000">
+        </el-pagination>
+     </div>
     </div>
   </div>
 </template>
@@ -118,44 +138,8 @@ export default {
 };
 </script>
 
-<style>
-.c-change{
-  cursor: pointer;
-}
-.search-box{
-  text-align: right;
-  flex: 1;
-  margin: 10px;
-  padding: 10px;
-  height: 60px;
-  border: 1px solid gainsboro;
-}
-.box{
-  display: flex;
-  justify-content: space-between; /* 横向中间自动空间 */
-  flex-wrap: wrap;
-}
-.item{
-  width: 18%;
-  height: 120px;
-  border: 1px solid gainsboro;
-  margin: 10px;
-}
-.item-img{
-  width: 30%;
-  height: 60px;
-  margin: 10px;
-  border-radius: 4px;
-  float: left;
-}
-.item-right{
-  text-align: left;
-  margin: 10px;
-  float: right;
-}
-.item-num{
-  float: left;
-  margin-top:80px;
-  margin-left: -100px;
-}
+<style scoped>
+
+ @import "../../static/css/home.css"
+
 </style>
