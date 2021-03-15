@@ -26,7 +26,14 @@ export default {
   },
   methods: {
     handleLogin () {
+      let _this=this
+      if(this.form.name===''||this.form.password===''){
+        alert('账户或密码不能为空')
+      }else{
+        
+      }
       console.log(123)
+
       this.$router.push({ path: '/Home' })
     }
   }

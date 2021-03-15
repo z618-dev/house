@@ -10,5 +10,10 @@ export const lang ={
   myhouse:'MyHouse',
   myfirsthouse:'MyFirstHouse',
   mysecondhouse:'MySecondHouse',
-  public:'PublicHouse'
+  public:'PublicHouse',
+  publicfirsthouse:'PublicFirstHouse',
+  publicsecondhouse:'PublicSecondHouse',
+  mycustomer:'CustomerMangement',
+  mycustomers:'Mycustomers',
+  mytask:'TaskMangement'
 }

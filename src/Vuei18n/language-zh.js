@@ -10,5 +10,10 @@ export const lang ={
   myhouse:'我的房源',
   myfirsthouse:'我的一手房',
   mysecondhouse:'我的二手房',
-  public:'公盘房源'
+  public:'公盘房源',
+  publicfirsthouse:'一手房',
+  publicsecondhouse:'二手房',
+  mycustomer:'客源管理',
+  mycustomers:'我的客源',
+  mytask:'任务管理'
 }
