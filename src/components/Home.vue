@@ -41,14 +41,14 @@
         <div class="layui-side-scroll">
           <ul class="layui-nav layui-nav-tree" lay-filter="test">
             <li class="layui-nav-item layui-nav-itemed">
-              <a href="javascript:;">我的房源</a>
+              <a href="javascript:;">{{ $t("lang.myhouse") }}</a>
               <dl class="layui-nav-child">
-                <dd><a href="javascript:;">我的一手房</a></dd>
-                <dd><a href="javascript:;">我的二手房</a></dd>
+                <dd><a href="javascript:;">{{ $t("lang.myfirsthouse") }}</a></dd>
+                <dd><a href="javascript:;">{{ $t("lang.mysecondhouse") }}</a></dd>
               </dl>
             </li>
             <li class="layui-nav-item">
-              <a href="javascript:;">公盘房源</a>
+              <a href="javascript:;">{{ $t("lang.public") }}</a>
               <dl class="layui-nav-child">
                 <dd><a href="javascript:;">一手房</a></dd>
                 <dd><a href="javascript:;">二手房</a></dd>

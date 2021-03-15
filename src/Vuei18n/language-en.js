@@ -6,5 +6,9 @@ export const lang ={
   work:'MyDailyWork',
   information:'InformationCenter',
   customer:'CustomerMangement',
-  task:'TaskMangement'
+  task:'TaskMangement',
+  myhouse:'MyHouse',
+  myfirsthouse:'MyFirstHouse',
+  mysecondhouse:'MySecondHouse',
+  public:'PublicHouse'
 }

@@ -6,5 +6,9 @@ export const lang ={
   work:'我的日常工作',
   information:'消息中心',
   customer:'客源管理',
-  task:'任务管理'
+  task:'任务管理',
+  myhouse:'我的房源',
+  myfirsthouse:'我的一手房',
+  mysecondhouse:'我的二手房',
+  public:'公盘房源'
 }
