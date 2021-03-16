@@ -1,47 +1,56 @@
 <template>
-     <div class="login">
-        <el-form ref="form" :model="form" label-width="80px" class="login-form">
-            <h2>用户登录</h2>
+    <div class="login" >
+        <el-form :model="loginForm" ref="loginForm" label-width="80px" :rules="loginRules" class="login-form">         
+            <h2>袋鼠找房--后台登录</h2>
             <el-form-item label="账户">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="loginForm.accountNum" prop="accountNum" name="accountNum" placeholder="请输入账号" auto-complete="on"></el-input>
             </el-form-item>
             <el-form-item label="密码">
-                <el-input v-model="form.password"></el-input>
+               <el-input v-model="loginForm.pwd" prop="pwd" name="pwd" placeholder="请输入密码" auto-complete="on"></el-input>
             </el-form-item>
-            <el-button type="primary" @click="handleLogin">登录</el-button>
+           <el-button type="primary" @click="handleLogin">登录</el-button>
         </el-form>
     </div>
 </template>
 
 <script>
+import api from "@/api/api"
 export default {
-  name: 'login',
-  data () {
+  name: "login",
+  data() {
     return {
-      form: {
-        name: '',
-        password: ''
+      loginForm: {
+            accountNum:"",pwd:""
+      },
+      loginRules: {
+        accountNum: [{ required: true,message: "请输入账号",trigger: "blur"}],
+        pwd: [{ required: true,message: '请输入密码',trigger: 'blur'}]
       }
     }
   },
   methods: {
-    handleLogin () {
-      let _this=this
-      if(this.form.name===''||this.form.password===''){
-        alert('账户或密码不能为空')
-      }else{
-        
+    handleLogin (){
+        console.log(123)
+        // this.$refs.loginForm.validate((valid) => {
+        //     if(valid){
+              api.login(this.loginForm.accountNum,this.loginForm.pwd).then((res) => {
+                  console.log(res.data.data)
+                  this.userToken=res.data.data
+              })
+              .catch((err) => console.log(err));
+        //     }
+        // })
+      //   this.$router.push({
+      //         name: "Home",
+      //         params: {
+      //         accountNum: this.loginForm.accountNum
+      //     }
+      // })
       }
-      console.log(123)
-
-      this.$router.push({ path: '/Home' })
-    }
   }
-
-}
+};
 </script>
-
-<style>
+<style scoped>
 .login{
     width:100%;text-align:center
 }

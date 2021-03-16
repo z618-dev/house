@@ -17,7 +17,7 @@ service.interceptors.request.use(config => {
      'Content-Type':'application/x-www-form-urlencoded' //配置请求头
    }
    //注意使用token的时候需要引入cookie方法或者用本地localStorage等方法，推荐js-cookie
-   const token = getCookie('名称');//这里取token之前，你肯定需要先拿到token,存一下
+   const token = getCookie('userToken');//这里取token之前，你肯定需要先拿到token,存一下
    if(token){
       config.params = {'token':token} //如果要求携带在参数中
       config.headers.token= token; //如果要求携带在请求头中

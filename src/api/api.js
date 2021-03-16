@@ -9,5 +9,8 @@ export default{
 	},
 	 postFormAPI(params){
     	return http.post(`${resquest}/postForm.json`,params)
+	},
+	login(params){
+    	return http.post(`${resquest}/kangotechappadmin/login`,params)
 	}
 }
