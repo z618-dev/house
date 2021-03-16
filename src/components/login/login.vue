@@ -14,13 +14,15 @@
 </template>
 
 <script>
-import api from "@/api/api"
+import api from "@/api/api";
+import { mapMutations } from 'vuex';
 export default {
   name: "login",
   data() {
     return {
       loginForm: {
-            accountNum:"",pwd:""
+          accountNum:'',
+          pwd:''
       },
       loginRules: {
         accountNum: [{ required: true,message: "请输入账号",trigger: "blur"}],
@@ -29,23 +31,29 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['changeLogin']),
     handleLogin (){
         console.log(123)
-        // this.$refs.loginForm.validate((valid) => {
-        //     if(valid){
-              api.login(this.loginForm.accountNum,this.loginForm.pwd).then((res) => {
-                  console.log(res.data.data)
-                  this.userToken=res.data.data
-              })
-              .catch((err) => console.log(err));
-        //     }
-        // })
-      //   this.$router.push({
-      //         name: "Home",
-      //         params: {
-      //         accountNum: this.loginForm.accountNum
-      //     }
-      // })
+         var _this = this;
+        this.loading = true;
+        api.login({accountNum:this.loginForm.accountNum,pwd:this.loginForm.pwd}).then(res=> {
+          console.log(11,res)
+          _this.loading = false;
+          if (res.status == 200) {
+            //成功
+              _this.userToken = 123;
+              // localStorage.setItem('Authorization',_this.userToken);
+              _this.changeLogin({Authorization:_this.userToken});
+              this.$router.push({path:'/Home'});
+          } else {
+            //失败
+            _this.$alert('登录失败!', '失败!');
+          }
+        }, res=> {
+          _this.loading = false;
+          _this.$alert('服务器端出错');
+        })
+      
       }
   }
 };
